@@ -1,0 +1,6 @@
+generated: '2026-09-28'
+method: probed
+generator: harvest-llms.py
+source: https://betterplaceforests.org/llms.txt
+bytes: 2113
+note: saved verbatim; the provider's own document

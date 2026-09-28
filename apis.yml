@@ -1,23 +1,71 @@
 aid: better-place-forests
+
 name: Better Place Forests
-description: 'Better Place Forests is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Better Place Forests is a nonprofit organization that provides nature‑based memorials and forest conservation. Families can plan cremation, funerals, and memorial services in protected forests across the United States, creating lasting memorials while supporting forest stewardship and grief support. The organization operates a network of nine forests, offering a range of memorial options, grief resources, and environmental stewardship programs.'
+
 url: https://raw.githubusercontent.com/api-evangelist/better-place-forests/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Nonprofit
+- Memorial
+- Forest Conservation
+- Grief Support
+- Environmental
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/better-place-forests-llms.txt
+- type: WellKnown
+  url: well-known/better-place-forests-well-known.yml
+- type: Hosts
+  url: hosts/better-place-forests-hosts.yml
+- type: Vendors
+  url: vendors/better-place-forests-vendors.yml
+- type: TermsOfService
+  url: https://betterplaceforests.org/terms
+- type: PrivacyPolicy
+  url: https://betterplaceforests.org/privacy
+- type: DomainSecurity
+  url: security/better-place-forests-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/better-place-forests_stock/
+  url: https://betterplaceforests.org
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-28'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://forgeglobal.com/better-place-forests_stock/
+    status: 403
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
